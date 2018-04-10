@@ -1,0 +1,9 @@
+<h1> <%= @song.title %> (<%= @song.release_year %>) </h1>
+<h2> By: <%= @song.artist_name %> </h2>
+<p> Genre: <%= @song.genre %> </p>
+
+<%= link_to "Song List", songs_path %>
+<br></br>
+<%= link_to 'Edit Song', edit_song_path %>
+<br></br>
+<%= link_to 'Delete Song', @song.destroy, confirm: "Do you want to delete #{@song.title} by #{@song.artist_name}?" %>
